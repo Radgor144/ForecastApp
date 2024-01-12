@@ -10,10 +10,6 @@ public class WeatherApplication {
 		SpringApplication.run(WeatherApplication.class, args);
 	}
 
-<<<<<<< HEAD
-
-=======
-	public void xd(){}
->>>>>>> f9f6495 (Add files via upload)
+	public void xd(String xxxx){}
 }
 
