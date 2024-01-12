@@ -10,6 +10,6 @@ public class WeatherApplication {
 		SpringApplication.run(WeatherApplication.class, args);
 	}
 
-	public void xd(String xxxx){}
+	public void yyyy(String yyyyyyyy){}
 }
 
