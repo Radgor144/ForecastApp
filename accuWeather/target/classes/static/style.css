@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 2000px;
+    background-color: rgb(100, 58, 58);
+    text-align: center;
+}
+
+main{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background-color: skyblue;
+    width: 800px;
+}
+
+table{
+    width: 300px;
+    height: 100%;
+
+}
