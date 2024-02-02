@@ -11,11 +11,17 @@ import java.net.http.HttpResponse;
 
 public class Connection {
 
+    public String cityName;
+
+    public Connection(String cityName) {
+        this.cityName = cityName;
+    }
     public Connection() {
+
     }
 
     public JsonNode Json() {
-        String url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/krakow?unitGroup=metric&include=fcst%2Chours%2Cdays%2Ccurrent%2Cevents%2Calerts&key=AM9ZTRLEYSXEF4YT5E79H7GBJ&contentType=json";
+        String url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + cityName + "?unitGroup=metric&include=fcst%2Chours%2Cdays%2Ccurrent%2Cevents%2Calerts&key=AM9ZTRLEYSXEF4YT5E79H7GBJ&contentType=json";
 
         try {
             HttpRequest request = HttpRequest.newBuilder()
@@ -37,4 +43,11 @@ public class Connection {
         }
     }
 
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
 }

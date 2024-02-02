@@ -16,30 +16,39 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     box-sizing: border-box;
     gap: 2rem;
     flex-wrap: wrap;
+    padding-top: 1rem;
 }
 
-.column {
-    background-color: aquamarine;
+.box3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
+
+
 
 .col1 {
-    min-width: 800px;
+    max-width: 800px;
     overflow: hidden;
+    background-color: rgb(227, 227, 227);
 }
 
 
 
 .col2 {
-    min-width: 500px;
+    min-width: 300px;
+    width: 500px
 }
 
 .box2 {
+    width: 100%;
     padding: 1rem;
 }
+
+
 
 .city{
     width: 100%;
@@ -56,11 +65,12 @@ p {
 
 
 .cities {
-    height: 280px;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .newCity {
@@ -75,7 +85,8 @@ p {
 }
 
 img {
-    width: 500px;
+    max-width: 500px;
+    height: 100%;
     border-radius: 1rem;
 }
 
@@ -119,6 +130,7 @@ td:nth-child(2), tr, tbody{
 canvas{
     margin: auto;
     width: 100%;
+    height: 400px;
 }
 
 .cloudcover {
@@ -157,5 +169,41 @@ canvas{
 }
 
 #myChart{
-    height: 50%;
+    display: inline-block;
 }
+
+.wykres {
+    width: 100%;
+}
+
+
+  
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+.dropdown-content.show {
+    max-height: 700px; /* Ustaw maksymalną wysokość na wartość większą od zawartości */
+    transition: max-height 0.3s ease-in;
+  }
+  
+.dropdown-content.hide {
+    max-height: 0; /* Ustaw maksymalną wysokość na 0 */
+    transition: max-height 0.3s ease-out;
+  }
+  
+
+.dropdown-header{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+}
+

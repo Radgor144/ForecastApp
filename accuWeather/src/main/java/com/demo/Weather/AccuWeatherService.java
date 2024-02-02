@@ -18,10 +18,11 @@ public class AccuWeatherService {
 
     public AccuWeatherService() {}
 
-    Connection connection = new Connection();
+
     CouldCover couldCover = new CouldCover();
 
-    public List<WeatherData> getWeatherData() {
+    public List<WeatherData> getWeatherData(String cityName) {
+        Connection connection = new Connection(cityName);
         return couldCover.CloudcoverBy12Hours(connection);
     }
 

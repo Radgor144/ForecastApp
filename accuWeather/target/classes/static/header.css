@@ -4,4 +4,12 @@ header{
     height: 50px;
     top: 0;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .location button{
+    width: 80px;
+    height: 40px;
 }
