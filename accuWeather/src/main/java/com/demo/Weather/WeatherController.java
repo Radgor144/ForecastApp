@@ -27,27 +27,25 @@ public class WeatherController {
     @GetMapping("")
     public String weather(@RequestParam(required = false) String cityName, Model model) {
         String city = cityName != null ? cityName : defaultCity;
-        List<WeatherData> weatherDataList = accuWeatherService.getWeatherData(cityName);
+        List<WeatherData> weatherDataList = accuWeatherService.getWeatherData(city);
 
         List<WeatherData> Cloudcover = weatherDataList.subList(0, Math.min(weatherDataList.size(), 12));
 
-//        for (WeatherData data : Cloudcover) {
-//            System.out.println("Datetime: " + data.getDatetime() + ", Temperature: " + data.getTemperature() + ", Cloudcover: " + data.getCloudcover() + ", Precipprob: " + data.getPrecipprob() + ", PreciptypeArray: " + Arrays.toString(data.getPreciptypeArray()));
-//        }
+
 
         model.addAttribute("weatherDataList", Cloudcover);
 
 
-        return "forecast";  // Zwraca nazwę pliku HTML (bez rozszerzenia) jako widok
+        return "forecast";
     }
 
     @PostMapping("")
-    public String handleFormData(@RequestParam("cityName") String cityName) {
-        // Tutaj możesz przetwarzać przesłaną nazwę miasta
+    public String citiesSearch(@RequestParam("cityName") String cityName) {
+
         System.out.println("Przekazana nazwa miasta: " + cityName);
-        // Ustaw nowe domyślne miasto
+
         defaultCity = cityName;
-        // Przekieruj użytkownika na tę samą stronę, ale z parametrem cityName
+
         return "redirect:/forecast?cityName=" + cityName;
     }
 }
