@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/weather")
+@RequestMapping("/forecast")
 public class WeatherController {
 
     private final AccuWeatherService accuWeatherService;
@@ -24,8 +24,11 @@ public class WeatherController {
     public String weather(Model model) {
         List<WeatherData> weatherDataList = accuWeatherService.getWeatherData();
 
-        model.addAttribute("weatherDataList", weatherDataList);
+        List<WeatherData> Cloudcover = weatherDataList.subList(0, Math.min(weatherDataList.size(), 12));
 
-        return "weather";  // Zwraca nazwę pliku HTML (bez rozszerzenia) jako widok
+        model.addAttribute("weatherDataList", Cloudcover);
+
+
+        return "forecast";  // Zwraca nazwę pliku HTML (bez rozszerzenia) jako widok
     }
 }

@@ -1,8 +1,7 @@
 header{
     background-color: rgb(50, 50, 50);
     width: 100%;
-    height: 80px;
-    position: fixed;
+    height: 50px;
     top: 0;
-
+    position: absolute;
 }

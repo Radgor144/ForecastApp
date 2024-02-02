@@ -4,12 +4,12 @@ public class WeatherData {
 
     private String datetime;
     private Double temperature;
-    private Double feelslike;
+    private Double cloudcover;
 
-    public WeatherData(String datetime, Double temperature, Double feelslike) {
+    public WeatherData(String datetime, Double temperature, Double cloudcover) {
         this.datetime = datetime;
         this.temperature = temperature;
-        this.feelslike = feelslike;
+        this.cloudcover = cloudcover;
     }
 
     public String getDatetime() {
@@ -28,11 +28,11 @@ public class WeatherData {
         this.temperature = temperature;
     }
 
-    public Double getFeelslike() {
-        return feelslike;
+    public Double getCloudcover() {
+        return cloudcover;
     }
 
-    public void setFeelslike(Double feelslike) {
-        this.feelslike = feelslike;
+    public void setCloudcover(Double cloudcover) {
+        this.cloudcover = cloudcover;
     }
 }
